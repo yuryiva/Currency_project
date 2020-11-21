@@ -36,3 +36,74 @@
     transform: rotate(360deg);
   }
 }
+
+
+nav{
+  display:flex;
+  flex-direction: row;
+  background-image: url('./sources/top-bckgr.PNG');
+  background-repeat: no-repeat;
+  height: 180px;
+  background-size: 100%;
+
+}
+
+nav ul{
+  display:flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+margin: 30px;
+
+
+  
+  
+  
+}
+nav ul li{
+  list-style-type: none;
+  margin: auto 100px;
+  margin-top: -45px;
+  padding: 20px 60px;
+  background: rgba(140, 139, 141, 0.2);
+  border-radius: 20px;
+  font: 1em  Courier, monospace;
+  font-size: 20px;
+ 
+  
+}
+
+
+left-top{
+  display: inline;
+}
+
+nav img{
+  height: 35px;
+  width: 35px;
+}
+
+nav p{
+  float: right;
+  color: #2F4F4F;
+  font: 1em  solid, monospace;
+  font-size: 55px;
+  margin-left: 40px;
+  margin-top: 10px;
+
+}
+
+.chart1{
+  margin-left: 550px;
+  margin-top: -20px;
+  margin-right: 550px;
+  background: rgba(32, 98, 100, 0.8);
+
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, #00C853, #B2FF59);
+
+  
+
+}
