@@ -1,20 +1,28 @@
-import React from 'react'
 
-const Navig = props => (
-    
- <nav>
-     <div className = 'left-top'>
-     <img src='{props.src}'/>
-      <p>{props.logoName}</p>
-      </div>
-      <ul>
-          <li>{props.firstText}</li>
-          <li>{props.secondText}</li>
-          <li>{props.thirdText}</li>
-      </ul>
- </nav>
-)
-
-export default Navig;
+import React, { Component } from 'react';
 
 
+
+class Navig extends Component {
+
+   
+
+  
+    render() {
+      return (
+        <nav>
+        <div className = 'left-top'>
+        <img src='{this.props.src}'/>
+         <p>{this.props.logoName}</p>
+         </div>
+         <ul>
+             <li>{this.props.firstText}</li>
+             <li>{this.props.secondText}</li>
+             <li>{this.props.thirdText}</li>
+         </ul>
+    </nav>
+      )
+    }
+  }
+  
+  export default Navig
