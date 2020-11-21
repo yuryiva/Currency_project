@@ -97,12 +97,12 @@ nav p{
   margin-left: 550px;
   margin-top: -20px;
   margin-right: 550px;
-  background: rgba(32, 98, 100, 0.8);
+  
 
-  border: 10px solid;
+  /* border: 10px solid;
   border-image-slice: 1;
   border-width: 5px;
-  border-image-source: linear-gradient(to left, #00C853, #B2FF59);
+  border-image-source: linear-gradient(to left, #00C853, #B2FF59); */
 
   
 
