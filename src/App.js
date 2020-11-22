@@ -1,7 +1,8 @@
-
+import React from 'react'
 import './App.css';
 import Chart1 from './components/Chart1'
 import Navig from './components/Navig'
+import CryptoNews from './components/News';
 
 
 function App() {
@@ -18,8 +19,14 @@ function App() {
       </div>
       <div className = 'mainchart'>
       <Chart1 />
-       
       </div>
+
+
+
+
+      {/* news block */}
+      <CryptoNews />
+
     </div>
   );
 }
