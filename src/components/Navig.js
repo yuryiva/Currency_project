@@ -12,7 +12,7 @@ class Navig extends Component {
       return (
         <nav>
         <div className = 'left-top'>
-        <img src='{this.props.src}'/>
+        <img src='{this.props.src}' alt={'this.props.name'}/>
          <p>{this.props.logoName}</p>
          </div>
          <ul>
