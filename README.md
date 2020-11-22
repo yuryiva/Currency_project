@@ -1,5 +1,6 @@
-
 Wild Traders
+
+Website about cryptocurrencies
 
 
 
@@ -14,3 +15,4 @@ Dzmitry ps https://github.com/DzmitryPS
 Yury Ivashchanka https://github.com/yuryiva         
 Nikolai         
 Kolko Valentin https://github.com/valiant9191         
+@WildCodeSchool
