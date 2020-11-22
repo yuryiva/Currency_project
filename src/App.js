@@ -3,6 +3,7 @@ import './App.css';
 import Chart1 from './components/Chart1'
 import Navig from './components/Navig'
 import CryptoNews from './components/News';
+import Footer from './components/Footer'
 
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
 
       {/* news block */}
       <CryptoNews />
+
+     <Footer />
 
     </div>
   );
