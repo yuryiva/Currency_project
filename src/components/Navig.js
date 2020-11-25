@@ -1,28 +1,57 @@
 
-import React, { Component } from 'react';
+import React, {useState} from 'react';
 
 
 
-class Navig extends Component {
 
-   
+const Navig= ()=>  {
 
+ const [navLinkOpen, navLinkToggle] = useState(false);
+
+ const handleNavlinksToggle =() => {
+   navLinkToggle(!navLinkOpen);
+ }
   
-    render() {
+const renderClasses = ()=> {
+  let classes = 'navlinks';
+
+  if(navLinkOpen){
+    classes += ' active'
+  }
+  return classes;
+}
+  
+    
       return (
-        <nav>
-        <div className = 'left-top'>
-        <img src='{this.props.src}' alt={'this.props.name'}/>
-         <p>{this.props.logoName}</p>
-         </div>
-         <ul>
-             <li>{this.props.firstText}</li>
-             <li>{this.props.secondText}</li>
-             <li>{this.props.thirdText}</li>
+        <nav className='Navbar'>
+          <div className='logo'>
+            <i className= 'fab fa-bitcoin'></i>
+            <h4>Wild Traders</h4>
+            </div>
+            <ul className={renderClasses()}>
+             <li className="link"><a href="#">News</a></li>
+             <li className="link"><a href="#">Charts</a></li>
+             <li className="link"><a href="#">About</a></li>
          </ul>
+         {
+           navLinkOpen == false ?
+         
+         <div onClick={handleNavlinksToggle} className="hamburger-toggle">
+             <i className = "fas fa-bars fa-lg"></i>
+         </div>
+
+          :
+          
+         <div onClick={handleNavlinksToggle} className="hamburger-krestik">
+             <i className ="far fa-times-circle"></i>
+         </div>
+
+         }
     </nav>
+
+         
       )
     }
-  }
+  
   
   export default Navig
