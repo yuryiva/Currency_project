@@ -2,9 +2,9 @@ import React from 'react';
 import './Button.css'
 
 const Button = (props) => (
-    <button
+    <p
     onClick={(e) => props.onBtnClick(e)}
-    >{props.name}</button>
+    >{props.name}</p>
     );
 
 export default Button;

@@ -5,13 +5,12 @@
     flex-direction: row;
     background-image: url('./img.jpeg');
     background-size: cover;
-    height: 150px;
+    height: 140px;
 }
 
 .pictureDiv {
     width: 40%;
     display: flex;
-    color: rgb(255,215,0);
     font-size: 40px;
 }
 
@@ -21,7 +20,12 @@ img {
 }
 
 .columnDiv {
-    width: 60%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    color: rgba(255,255,255, 0.85);
 }
 
 .aboutUs {
@@ -31,11 +35,13 @@ img {
     bottom: 15%;
     left: 27%;
     width: 20%;
-    height: 200px;
+    height: 150px;
     background-color: lightblue;
     padding: 10px;
     box-shadow: 50px 50px 200px 80px rgba(0,0,0,0.4);
     border-radius: 5px;
+    color: black;
+    font-size: 16px;
 }
 
 
@@ -50,6 +56,8 @@ img {
     padding: 10px;
     box-shadow: 50px 50px 200px 80px rgba(0,0,0,0.4);  
     border-radius: 5px;
+    color: black;
+    font-size: 16px;
 }
 
 
@@ -59,9 +67,11 @@ img {
     bottom: 20%;
     right: 5%;
     width: 20%;
-    height: 50px;
+    height: 60px;
     background-color: lightblue;
     padding: 10px;
     box-shadow: 50px 50px 200px 80px rgba(0,0,0,0.4);  
     border-radius: 5px;
+    color: black;
+    font-size: 16px;
 }

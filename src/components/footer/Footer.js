@@ -46,11 +46,11 @@ class Footer extends Component {
         //  const { show } = this.state;
         return (
             <div className="footer">
-                <div></div>
+                <div className='pictureDiv'></div>
                 <div className='columnDiv'>
                     <Button
                         onBtnClick={this.onBtnClick}
-                        name={'ABOUT US'} />
+                        name={'About us'} />
                     {this.state.showAboutUs && <Modal className={'aboutUs'}
                         text1={<a href='https://github.com/DzmitryPS'>DIMA GITHUB</a>}
                         text2={<a href='https://github.com/valiant9191'>VALENTIN GITHUB</a>}
@@ -77,7 +77,7 @@ class Footer extends Component {
                 <div className='columnDiv'>
                     <Button
                         onBtnClick={this.onBtnContactClick}
-                        name={'CONTACT US'} />
+                        name={'Contact'} />
                     {this.state.showContact && <Modal className='contactUs'
                     text1={'crypto@crypto.com'}
                     close={this.onBtnClose}
