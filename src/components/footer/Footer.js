@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button from '../button/Button';
 import Modal from '../modal/Modal';
 import './Footer.css';
-import Logo from './Logo1.png'
+import Logo from './cut.png'
 
 class Footer extends Component {
 
@@ -46,7 +46,7 @@ class Footer extends Component {
         //  const { show } = this.state;
         return (
             <div className="footer">
-                <div><img src={Logo} alt="Logo" className='pictureDiv' /></div>
+                <div></div>
                 <div className='columnDiv'>
                     <Button
                         onBtnClick={this.onBtnClick}
