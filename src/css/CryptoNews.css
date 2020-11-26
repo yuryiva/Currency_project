@@ -25,6 +25,7 @@
     overflow-y: scroll;
     margin: 2px;
     flex-wrap: wrap;
+    min-width: 35%;
     background-color: rgba(177, 245, 218, 0.274);
     justify-content: center;
     border: 1px solid rgba(0, 0, 139, 0.164);
@@ -32,8 +33,11 @@
     box-shadow: -4px 4px 30px 5px rgba(44, 23, 231, 0.233);
 }
 .newsBlock{
+    
+    overflow: hidden;
     display: flex;
     width: 30%;
+    
     height: 250px;
     border: 1px solid darkblue;
     border-radius: 5px;
@@ -43,3 +47,4 @@
 }
 
 /* .newsBlock */
+
