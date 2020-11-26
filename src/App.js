@@ -5,7 +5,7 @@ import Chart1 from './components/Chart1'
 import Navig from './components/Navig'
 import TradeWithUs from './components/TradeWithUs'
 import CryptoNews from './components/News';
-import Footer from './components/Footer'
+import Footer from './components/footer/Footer'
 
 
 function App() {
