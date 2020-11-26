@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css';
+import ApiData from './components/ApiData'
 
 import Chart1 from './components/Chart1'
 import Navig from './components/Navig'
@@ -16,9 +17,10 @@ function App() {
       </div>
       <div className = 'mainchart'>
       <Chart1 />
+      <ApiData/>
       </div>
       <TradeWithUs />
-
+  
 
 
 
