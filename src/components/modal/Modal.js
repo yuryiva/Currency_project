@@ -8,7 +8,12 @@ const Modal = (props) => (
     <p>{props.text2}</p>
     <p>{props.text3}</p>
     <p>{props.text4}</p>
-    <button onClick={props.close}>Close</button>
+    <p>{props.text5}</p>
+    <p>{props.text6}</p>
+    <p>{props.text7}</p>
+    <p>{props.text8}</p>
+    
+    <button className = 'closeBtn' onClick={props.close}>Close</button>
     </div>
 )
 

@@ -70,6 +70,15 @@ class Footer extends Component {
                         text4={<p><em>Market Capitalization</em> is one way to rank the relative size of a cryptocurrency. It's calculated by multiplying the Price by the Circulating Supply.
                                 Market Cap = Price X Circulating Supply"
                               </p>}
+                        text5={<b>What is the difference between a <em>"Coin"</em> and a <em>"Token"</em> </b>}
+                        text6={<p>A <em>Coin</em> is a cryptocurrency that can operate independently. A <em>Token</em> is a cryptocurrency that depends on another cryptocurrency as a platform to operate. Check out the crypto tokens listings to view a list of tokens and their respective platforms.
+                                </p>}
+                        text7={<b>Why is the <em>Circulating Supply</em> used in determining the market capitalization instead of <em>Total Supply?</em> </b>}
+                        text8={<p>We've found that <em>Circulating Supply</em> is a much better metric for determining the market capitalization. Coins that are locked, reserved, or not able to be sold on the public market are coins that can't affect the price and thus should not be allowed to affect the market capitalization as well. The method of using the Circulating Supply is analogous to the method of using public float for determining the market capitalization of companies in traditional investing.
+                                </p>}
+
+
+
                         close={this.onBtnClose}
                     />
                     }
