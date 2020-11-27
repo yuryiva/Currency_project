@@ -1,12 +1,20 @@
 .newsBlockTitle{
     display: flex;
-    font-size: 1.5vw;
-    background-image: repeating-linear-gradient(  #ecea72 , #88ff00 );
+    font-size: 2vw;
+    background-image: repeating-linear-gradient(  #ffffff , #8a80df85 );
     margin: 1%;
     border-radius: 3px;
+    flex-wrap: wrap;
+    
 }
 .newsBlockImage{
-    max-height:100%;
-    max-width:90%;
+    max-height:40%;
+    min-height: 30%;
+    max-width:40%;
+    min-width: 30%;
 
+}
+.newsBlockText{
+    flex-wrap: wrap;
+    font-size: 1.5vw;
 }

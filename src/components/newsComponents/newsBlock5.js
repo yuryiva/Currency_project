@@ -11,7 +11,7 @@ import './newsBlock.css'
 //apicall other way
 
 
-class NewsBlock extends Component {
+class NewsBlock5 extends Component {
 
   state={
     titleOfNews: '',
@@ -26,10 +26,10 @@ class NewsBlock extends Component {
     fetch (fullUrl)
     .then(urlNews =>  urlNews.json())  
     .then(newsApiJson => this.setState({
-    titleOfNews: newsApiJson.articles[1].title,
-    authorOfNews: newsApiJson.articles[1].author,
-    pictureOfNews: newsApiJson.articles[1].urlToImage,
-    contentOfNews: newsApiJson.articles[1].description
+    titleOfNews: newsApiJson.articles[5].title,
+    authorOfNews: newsApiJson.articles[5].author,
+    pictureOfNews: newsApiJson.articles[5].urlToImage,
+    contentOfNews: newsApiJson.articles[5].description
     }))
   }
 
@@ -49,4 +49,4 @@ class NewsBlock extends Component {
   }
 }
 
-export default NewsBlock;
+export default NewsBlock5;
