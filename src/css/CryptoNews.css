@@ -19,6 +19,7 @@
     font-style: italic;
     text-decoration-color: ivory;
 }
+
 .news{
     display: flex;
     width: auto;
@@ -27,11 +28,7 @@
     margin: 2px;
     flex-wrap: wrap;
     min-width: 35%;
-<<<<<<< HEAD
-    background-color: rgba(177, 245, 218, 0.274);
-=======
     
->>>>>>> d1b2f67b89a22b5a2ce27a808ac85d7d36980610
     justify-content: center;
     border: 1px solid rgba(0, 0, 139, 0.164);
     border-radius: 5px;
@@ -40,15 +37,9 @@
 .newsBlock{
     
     overflow: hidden;
-<<<<<<< HEAD
-    display: flex;
-    width: 30%;
-    
-=======
     display:block;
     width: 30%;
     background-color: rgba(177, 245, 218, 0.438);
->>>>>>> d1b2f67b89a22b5a2ce27a808ac85d7d36980610
     height: 250px;
     border: 1px solid darkblue;
     border-radius: 5px;
