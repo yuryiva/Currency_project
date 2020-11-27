@@ -1,0 +1,77 @@
+
+.footer{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    background-image: url('./img.jpeg');
+    background-size: cover;
+    height: 140px;
+}
+
+.pictureDiv {
+    width: 40%;
+    display: flex;
+    font-size: 40px;
+}
+
+img {
+    width:50%;
+    height: 100%;
+}
+
+.columnDiv {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    color: rgba(255,255,255, 0.85);
+}
+
+.aboutUs {
+    
+    position: fixed;
+    z-index: 1;
+    bottom: 15%;
+    left: 27%;
+    width: 20%;
+    height: 150px;
+    background-color: lightblue;
+    padding: 10px;
+    box-shadow: 50px 50px 200px 80px rgba(0,0,0,0.4);
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+}
+
+
+.faq{
+    position: fixed;
+    z-index: 1;
+    bottom: 12%;
+    left: 25%;
+    width: 60%;
+    height: 530px;
+    background-color: lightblue;
+    padding: 10px;
+    box-shadow: 50px 50px 200px 80px rgba(0,0,0,0.4);  
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+}
+
+
+.contactUs{
+    position: fixed;
+    z-index: 1;
+    bottom: 20%;
+    right: 5%;
+    width: 20%;
+    height: 60px;
+    background-color: lightblue;
+    padding: 10px;
+    box-shadow: 50px 50px 200px 80px rgba(0,0,0,0.4);  
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+}
