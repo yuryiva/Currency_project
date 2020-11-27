@@ -42,7 +42,7 @@ class NewsBlock4 extends Component {
             onFocus
             onMouseOver ={ () => this.state.authorOfNews}
                 className='newsBlockImage' src={this.state.pictureOfNews} alt={this.state.titleOfNews} /> 
-         {this.state.contentOfNews} 
+            <p className='newsBlockText'>{this.state.contentOfNews}</p> 
          <p>author: {this.state.authorOfNews}</p>
       </div> 
     )
