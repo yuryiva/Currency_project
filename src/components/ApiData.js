@@ -46,17 +46,11 @@ class App extends Component {
 
 
 
-
   filteredCoins = () => {
     let filterCoin = this.state.data.filter((coin) =>
       coin.id.toLowerCase().includes(this.state.search.toLowerCase()) || coin.symbol.toLowerCase().includes(this.state.search.toLowerCase()))
     return filterCoin;
   }
-
-
-
-
- 
 
 
   chooseCoin = (index) => {
