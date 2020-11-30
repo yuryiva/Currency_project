@@ -2,6 +2,7 @@ import React, {Component, useState} from 'react';
 import '../css/ApiData.css'
 import Coin from "./Coin"
 import Chart1 from './Chart1'
+import CoinMoreStuff from './CoinMoreStuff'
 
 
 
@@ -16,6 +17,7 @@ class App extends Component {
       apiLoaded: false,
       data: {} ,
       search: 'eth',
+      winner: false
     }
 
   
@@ -49,6 +51,13 @@ class App extends Component {
      }
 
 
+     chooseCoin = () =>
+
+  this.setState({
+      winner: !this.state.winner
+  })
+
+
       render() {
         return (
           <div className="coin-app">
@@ -75,18 +84,28 @@ class App extends Component {
                      
                   {this.filteredCoins().map(character =>{
                     return(
-     
+                       <div>
+                      <div className={character.id} onClick={this.chooseCoin}>
                       <Coin 
                       id={character.id}
                       image={character.image}
                       symbol={character.symbol.toUpperCase()}
+                     />
+                     </div>
+                     
+                     <div className= {character.id}  style={{display: this.state.winner ? 'block' : 'none' }}   >
+                      <CoinMoreStuff
                       price={character.current_price}
                       volume={character.market_cap}
                       priceChange={character.price_change_percentage_24h}
-                     />
+                      />
+                      </div>
+
+                     </div>
 
                     )
                   })}
+                  
                      <Chart1 />
                   </div>
 
