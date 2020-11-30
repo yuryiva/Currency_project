@@ -111,7 +111,7 @@ arrayOfCoinsToShow[index].show = !this.state.data[index].show
                         <CoinMoreStuff
                           price={character.current_price}
                           volume={character.market_cap}
-                          priceChange={character.price_change_percentage_24h}
+                          priceChange=  {character.price_change_percentage_24h}
                         />
                       </div>
 
