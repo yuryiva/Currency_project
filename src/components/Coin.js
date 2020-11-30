@@ -5,11 +5,9 @@ class Coin extends Component {
 
     state = {
         showMoreData: false,
-        winner:""
       }
 
 
-    
     
 
 
