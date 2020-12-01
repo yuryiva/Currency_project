@@ -108,11 +108,21 @@ arrayOfCoinsToShow[index].show = !this.state.data[index].show
                       </div>
 
                       <div style={{ display: this.state.data[index].show ? 'block' : 'none' }}   >
+
+                        
+                        { character.price_change_percentage_24h ? (
+                          <CoinMoreStuff
+                          price={character.current_price}
+                          volume={character.market_cap}
+                          priceChange =  {character.price_change_percentage_24h}
+                        />
+                        ) :(
                         <CoinMoreStuff
                           price={character.current_price}
                           volume={character.market_cap}
-                          priceChange=  {character.price_change_percentage_24h}
-                        />
+                          priceChange =  {0}
+                        />)
+                }
                       </div>
 
                     </div>
@@ -125,7 +135,9 @@ arrayOfCoinsToShow[index].show = !this.state.data[index].show
 
             </div>
             :
-            <p>SHOW SOME LOADING SPINNER</p>
+            <div>
+            <i className="fa fa-spinner fa-spin" /> Loading...
+          </div>
         }
 
       </div>
