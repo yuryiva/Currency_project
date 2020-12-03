@@ -1,52 +1,26 @@
-import React, { Component } from 'react'
-
-import fullUrl from './fullUrl'
-
-import './newsBlock.css'
+import React from 'react'
+import "../../css/CryptoNews.css"
 
 
+function NewsBlock (props) {
 
 
-
-//apicall other way
-
-
-class NewsBlock extends Component {
-
-  state={
-    titleOfNews: '',
-    authorOfNews: '',    
-    pictureOfNews:'',
-    contentOfNews:'',
-  }
-
-
-
-  componentDidMount(){ 
-    fetch (fullUrl)
-    .then(urlNews =>  urlNews.json())  
-    .then(newsApiJson => this.setState({
-    titleOfNews: newsApiJson.articles[1].title,
-    authorOfNews: newsApiJson.articles[1].author,
-    pictureOfNews: newsApiJson.articles[1].urlToImage,
-    contentOfNews: newsApiJson.articles[1].description
-    }))
-  }
-
-  render() {
     return (
-      <div>
-        <p className='newsBlockTitle'>Title: {this.state.titleOfNews}</p>
+      <div className="newsBlock">  
+
+        <h4 className='newsBlockTitle'>{props.title}
         
-        <img
-            onFocus
-            onMouseOver ={ () => this.state.authorOfNews}
-                className='newsBlockImage' src={this.state.pictureOfNews} alt={this.state.titleOfNews} /> 
-         {this.state.contentOfNews} 
-         <p>author: {this.state.authorOfNews}</p>
-      </div> 
+        </h4>
+        
+        <img className='newsBlockImage' src={props.image} alt={props.title}/>
+         <button>more</button> 
+         <p>{props.description} </p>
+         <h6>{props.author}</h6>
+
+        </div>
+        
+      
     )
   }
-}
 
 export default NewsBlock;
