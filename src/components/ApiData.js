@@ -74,6 +74,7 @@ arrayOfCoinsToShow[index].show = !this.state.data[index].show
 
   render() {
     return (
+      <div className = 'mainchart'>
       <div className="coin-app">
 
         {
@@ -140,6 +141,7 @@ arrayOfCoinsToShow[index].show = !this.state.data[index].show
           </div>
         }
 
+      </div>
       </div>
     )
   }
