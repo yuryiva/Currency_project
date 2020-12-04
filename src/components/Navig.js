@@ -31,7 +31,7 @@ const renderClasses = ()=> {
             <ul className={renderClasses()}>
              <li className="link"><a href="#">News</a></li>
              <li className="link"><a href="#">Charts</a></li>
-             <li className="link"><a href="#">About</a></li>
+             <li className="link"><a href="#">Info</a></li>
          </ul>
          {
            navLinkOpen == false ?
