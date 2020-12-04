@@ -5,9 +5,13 @@
     height: 600px;
     overflow-y: scroll;
     background-color: #F0FFFF;
-    background: radial-gradient(at center center, #2d7e9270 0%, #1c40617c 100%)
+    background: radial-gradient(at center center, #2d7e9270 0%, #1c40617c 100%);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     
 }
+
+.allCoins::-webkit-scrollbar {display: none;}
 
 
 .coin-container img{
