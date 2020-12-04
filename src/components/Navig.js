@@ -1,5 +1,7 @@
 
 import React, {useState} from 'react';
+import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom'
+
 
 
 
@@ -24,14 +26,16 @@ const renderClasses = ()=> {
     
       return (
         <nav className='Navbar'>
+            <>
           <div className='logo'>
             <i className= 'fab fa-bitcoin'></i>
             <h4>Wild Traders</h4>
             </div>
             <ul className={renderClasses()}>
-             <li className="link"><a href="#">News</a></li>
-             <li className="link"><a href="#">Charts</a></li>
-             <li className="link"><a href="#">About</a></li>
+            <li className="link"><Link to="/">Home</Link></li>
+             <li className="link"><Link to="/News">News</Link></li>
+             <li className="link"><Link to="/Charts">Charts</Link></li>
+             <li className="link"><Link to="/About">About</Link></li>
          </ul>
          {
            navLinkOpen == false ?
@@ -47,6 +51,9 @@ const renderClasses = ()=> {
          </div>
 
          }
+
+         </>
+
     </nav>
 
          
