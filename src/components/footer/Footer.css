@@ -5,7 +5,7 @@
     flex-direction: row;
     background-image: url('./img.jpeg');
     background-size: cover;
-    height: 140px;
+    height: 10vh;
 }
 
 .pictureDiv {
@@ -36,11 +36,11 @@ img {
     left: 27%;
     width: 20%;
     height: 150px;
-    background-color: lightblue;
+    background-image: url(https://onlineplus.com.au/wp-content/uploads/2016/11/slider-background-1.jpg);
     padding: 10px;
     box-shadow: 50px 50px 200px 80px rgba(0,0,0,0.4);
     border-radius: 5px;
-    color: black;
+    color: rgb(51, 45, 179);
     font-size: 16px;
 }
 
@@ -52,11 +52,11 @@ img {
     left: 25%;
     width: 60%;
     height: 530px;
-    background-color: lightblue;
+    background-image: url(https://onlineplus.com.au/wp-content/uploads/2016/11/slider-background-1.jpg);
     padding: 10px;
-    box-shadow: 50px 50px 200px 80px rgba(0,0,0,0.4);  
+    box-shadow: 50px 50px 200px 80px rgba(54, 54, 54, 0.4);  
     border-radius: 5px;
-    color: black;
+    color: rgb(221, 221, 221);
     font-size: 16px;
 }
 
@@ -68,10 +68,10 @@ img {
     right: 5%;
     width: 20%;
     height: 60px;
-    background-color: lightblue;
+    background-image: url(https://onlineplus.com.au/wp-content/uploads/2016/11/slider-background-1.jpg);
     padding: 10px;
-    box-shadow: 50px 50px 200px 80px rgba(0,0,0,0.4);  
+    box-shadow: 50px 50px 200px 80px rgba(151, 151, 151, 0.4);  
     border-radius: 5px;
-    color: black;
+    color: rgb(96, 79, 160);
     font-size: 16px;
 }
