@@ -52,10 +52,10 @@ class Footer extends Component {
                         onBtnClick={this.onBtnClick}
                         name={'About us'} />
                     {this.state.showAboutUs && <Modal className={'aboutUs'}
-                        text1={<a href='https://github.com/DzmitryPS'>DIMA GITHUB</a>}
-                        text2={<a href='https://github.com/valiant9191'>VALENTIN GITHUB</a>}
+                        text1={<a href='https://github.com/DzmitryPS'>Dima GITHUB</a>}
+                        text2={<a href='https://github.com/valiant9191'>Valentin GITHUB</a>}
                         text3={'NIKOLAI GITHUB'}
-                        text4={<a href='https://github.com/yuryiva'>YURY GITHUB</a>}
+                        text4={<a href='https://github.com/yuryiva'>Yuri GITHUB</a>}
                         close={this.onBtnClose}
                     />}
                 </div>
