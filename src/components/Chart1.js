@@ -25,16 +25,16 @@ class Chart1 extends Component {
       <div className = 'chart1'>
 
         <AreaChart
-          width={800}
+          width={900}
           height={600}
-          data={this.state.data}
+          data={this.props.data}
           //margin={{top: 10, right: 0, left: 0}}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
+          <XAxis dataKey="Date" />
           <YAxis />
           <Tooltip />
-          <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+          <Area type="monotone" dataKey="Price_$" stroke="#8884d8" fill="#8884d8" />
         </AreaChart>
       </div>
     );

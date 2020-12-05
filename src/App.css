@@ -48,12 +48,6 @@ a {
 }
 
 
-.chart1{
-  margin-left: 550px;
-  margin-top: -20px;
-  margin-right: 550px;
-  position: absolute;
-}
 
 nav{
   display: flex;
@@ -182,3 +176,4 @@ link{
     display: none;
   }
 }
+

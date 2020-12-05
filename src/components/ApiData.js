@@ -17,7 +17,7 @@ class App extends Component {
     apiLoaded: false,
     data: {},
     search: 'eth',
-    winner: false
+    winner: false,
   }
 
 
@@ -33,7 +33,7 @@ class App extends Component {
 
         this.setState({
           data: dataWithNewProperties,
-          apiLoaded: true
+          apiLoaded: true,
         })
         
       })
@@ -84,7 +84,6 @@ arrayOfCoinsToShow[index].show = !this.state.data[index].show
             <div>
 
               <div className="coin-search">
-                <h1>Search a currency</h1>
                 <form>
                   <input
                     type="text"
@@ -94,45 +93,61 @@ arrayOfCoinsToShow[index].show = !this.state.data[index].show
                   />
                 </form>
               </div>
+              <div className="allStufs">
               <div className="allCoins">
-
+              
                 {this.filteredCoins().map((character, index) => {
+                  
                   return (
-                    <div>
+                    
+                      <div className="coinFullInfo">
                       <div className={character.id} onClick={() => this.chooseCoin(index)}>
+                          
                         <Coin
                           id={character.id}
                           image={character.image}
                           symbol={character.symbol.toUpperCase()}
                         />
                       </div>
-
-                      <div style={{ display: this.state.data[index].show ? 'block' : 'none' }}   >
-
-                        
-                        { character.price_change_percentage_24h ? (
-                          <CoinMoreStuff
-                          price={character.current_price}
-                          volume={character.market_cap}
-                          priceChange =  {character.price_change_percentage_24h}
-                        />
-                        ) :(
-                        <CoinMoreStuff
-                          price={character.current_price}
-                          volume={character.market_cap}
-                          priceChange =  {0}
-                        />)
-                }
                       </div>
-
-                    </div>
-
                   )
-                })}
-
-                <Chart1 />
+                })}                
               </div>
-
+              <div className='testDiv'>
+              {this.filteredCoins().map((character, index) => {
+                  
+                  return (
+                    <div style={{ display: this.state.data[index].show ? 'block' : 'none' }}   >
+                    <div className="moreData">
+                 
+                 { character.price_change_percentage_24h ? (
+                  
+                   <CoinMoreStuff
+                   price={character.current_price}
+                   volume={character.market_cap}
+                   priceChange =  {character.price_change_percentage_24h}
+                 />
+                 ) :(
+                 <CoinMoreStuff
+                   price={character.current_price}
+                   volume={character.market_cap}
+                   priceChange =  {0}
+                 />)
+                 
+         }
+          </div>  
+               <div className="chartContainer">
+                        <Chart1
+                         data={ [
+                                { Date: character.last_updated, Price_$: character.current_price },]}
+                                 /> 
+               </div>
+                    
+               </div>
+                    )
+                  })}  
+                  </div>              
+            </div>
             </div>
             :
             <div>
