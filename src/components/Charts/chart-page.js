@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import NewsBlock from '../newsComponents/newsBlock'
+
 
 class ChartPage extends Component {
     render() {
