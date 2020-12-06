@@ -65,15 +65,12 @@ class App extends Component {
 }
 arrayOfCoinsToShow[index].show = !this.state.data[index].show
 }
-
-
     this.setState({
         data: arrayOfCoinsToShow
        })
-
-
-
   }
+
+
 
 
   //___Working very bad.
@@ -108,6 +105,8 @@ showPlus=(index)=>{
 addToFavorite=(character)=>{
  
 let favCoin = this.state.favoriteCoin.map(coin => ({...coin}))
+
+
 if(favCoin.length <=4){
 
 favCoin.push(character)
@@ -117,6 +116,15 @@ favCoin.push(character)
   }else{
     alert('You are reached limit of favorite coins')
   }
+}
+
+
+deleteFavorite=(index)=>{
+  let copyOfList = this.state.favoriteCoin
+  copyOfList.splice(index,1)
+  this.setState({
+    favoriteCoin: copyOfList
+  })
 }
 
 
@@ -134,16 +142,22 @@ favCoin.push(character)
 
             <div>
               <div className="favorite-main">
+              
               {this.state.favoriteCoin.map((character, index) => {
+                
                   return (
-                    <div className="favorite-container" onClick={() => this.chooseCoin(index)}>
-                      <i class="fal fa-times"></i>
+                   
+                    <div className="favorite-container" >
+                    
+                      <i class="fab fa-mixer" onClick={()=>this.deleteFavorite(index)}></i>
                         <img src={character.image}/>
                     </div>
-                    
+                   
                       
                   )
+                
                 })}  
+             
               </div>
 
               <div className="coin-search">

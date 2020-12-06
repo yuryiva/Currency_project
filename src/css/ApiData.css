@@ -152,7 +152,7 @@ opacity: 1;
     color: f0fe;
     opacity: 0.3;
     cursor: pointer;
-    position: absolute;
+    
 }
 
 .favorite-main{
@@ -182,12 +182,13 @@ opacity: 1;
 
 .favorite-container img{
     height: 45px;
-    width: 45px;
-    margin-top: 7px;
+    width: 85%;
+    margin: auto;
     
    
 }
 
 .favorite-container i{
-    font-size: 15px;
+    font-size: 12px;
+    position: absolute;
 }
