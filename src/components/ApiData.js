@@ -18,6 +18,7 @@ class App extends Component {
     data: {},
     search: 'eth',
     winner: false,
+    favoriteCoin:[]
   }
 
 
@@ -28,7 +29,7 @@ class App extends Component {
       .then(response => (response.json()))
       .then(dataFromApi => {
 
-        let dataWithNewProperties = dataFromApi.map(coin => ({...coin, show:false}))
+        let dataWithNewProperties = dataFromApi.map(coin => ({...coin, show:false, showPlus:false}))
         
 
         this.setState({
@@ -69,7 +70,56 @@ arrayOfCoinsToShow[index].show = !this.state.data[index].show
     this.setState({
         data: arrayOfCoinsToShow
        })
+
+
+
   }
+
+
+  //___Working very bad.
+
+timer=(index)=>{
+  setTimeout(() => {
+    let arrayOfCoinsToShow = [...this.state.data]
+  arrayOfCoinsToShow[index].showPlus = false
+
+  this.setState({
+    data: arrayOfCoinsToShow
+   })
+    }, 2000);
+
+}
+
+
+showPlus=(index)=>{
+  let arrayOfCoinsToShow = [...this.state.data]
+  arrayOfCoinsToShow[index].showPlus = true
+
+  this.setState({
+    data: arrayOfCoinsToShow
+   })
+
+ this.timer(index);
+    
+
+   
+}
+
+addToFavorite=(character)=>{
+ 
+let favCoin = this.state.favoriteCoin.map(coin => ({...coin}))
+if(favCoin.length <=4){
+
+favCoin.push(character)
+  this.setState({
+    favoriteCoin: favCoin
+   })
+  }else{
+    alert('You are reached limit of favorite coins')
+  }
+}
+
+
 
 
   render() {
@@ -83,6 +133,18 @@ arrayOfCoinsToShow[index].show = !this.state.data[index].show
 
 
             <div>
+              <div className="favorite-main">
+              {this.state.favoriteCoin.map((character, index) => {
+                  return (
+                    <div className="favorite-container" onClick={() => this.chooseCoin(index)}>
+                      <i class="fal fa-times"></i>
+                        <img src={character.image}/>
+                    </div>
+                    
+                      
+                  )
+                })}  
+              </div>
 
               <div className="coin-search">
                 <form>
@@ -102,7 +164,7 @@ arrayOfCoinsToShow[index].show = !this.state.data[index].show
                   return (
                     
                       <div className="coinFullInfo">
-                      <div className={this.state.data[index].show  ? "active" : "notActive"} onClick={() => this.chooseCoin(index)}>
+                      <div className={this.state.data[index].show  ? "active" : "notActive"} onClick={() => this.chooseCoin(index)} onMouseEnter={()=>this.showPlus(index)}>
                           
                         <Coin
                           id={character.id}
@@ -110,6 +172,9 @@ arrayOfCoinsToShow[index].show = !this.state.data[index].show
                           symbol={character.symbol.toUpperCase()}
                         />
                       </div>
+                            <div className="plus" style={{ display: this.state.data[index].showPlus ? 'block' : 'none' }} onClick={() => this.addToFavorite(character)}>
+                            <i class="fas fa-plus-square"></i>
+                            </div>
                       </div>
                   )
                 })}                

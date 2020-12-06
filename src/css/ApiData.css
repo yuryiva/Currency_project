@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .allStufs{
     height: 630px;
       display:flex;
@@ -121,12 +124,7 @@ opacity: 1;
     
 }
 
-/* .chart1{
-  margin-left: 550px;
-  /* margin-top: -20px;
-  margin-right: 550px; 
-  position: absolute;
-} */
+
 
 .chartContainer{
     margin-left: 350px;
@@ -138,5 +136,58 @@ opacity: 1;
   
 .active{
     color: rgb(255,215,0);
-    text-decoration: underline solid rgb(255,215,0);;
+   
+}
+
+/* plus icon*/
+
+.plus{
+    margin-left: 10px;
+    margin-top: 23px;
+}
+
+.plus i{
+    box-sizing: content-box;
+    font-size: 30px;
+    color: f0fe;
+    opacity: 0.3;
+    cursor: pointer;
+    position: absolute;
+}
+
+.favorite-main{
+    display: flex;
+    min-height: 8vh;
+    width: 100%;
+    justify-content: center;
+   align-items: center;
+   background-color: #A9A9A9;
+   background: radial-gradient(at center center, #2d7e9270 0%, #1c40617c 100%);
+   
+}
+
+.favorite-container{
+    display:flex;
+    flex-direction: row-reverse;
+    margin: auto 15px;
+    border-radius: 5px;
+    height: 60px;
+    width: 60px;
+    background-color: #A9A9A9;
+    background: radial-gradient(at center center, #2d7e9270 0%, #1c40617c 100%);
+    cursor: pointer;
+   
+}
+
+
+.favorite-container img{
+    height: 45px;
+    width: 45px;
+    margin-top: 7px;
+    
+   
+}
+
+.favorite-container i{
+    font-size: 15px;
 }
