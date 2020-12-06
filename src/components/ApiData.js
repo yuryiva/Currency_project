@@ -102,7 +102,7 @@ arrayOfCoinsToShow[index].show = !this.state.data[index].show
                   return (
                     
                       <div className="coinFullInfo">
-                      <div className={character.id} onClick={() => this.chooseCoin(index)}>
+                      <div className={this.state.data[index].show  ? "active" : "notActive"} onClick={() => this.chooseCoin(index)}>
                           
                         <Coin
                           id={character.id}
