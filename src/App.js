@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom';
+import { Switch,  Route} from 'react-router-dom';
 import './App.css';
 import ApiData from './components/ApiData';
 import Navig from './components/Navig';
