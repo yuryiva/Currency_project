@@ -1,0 +1,8 @@
+.newsPage{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.493);
+    background-image: url(https://ciphertrace.com/wp-content/uploads/2019/03/compliance-risk-bg-min.jpg);
+    background-size: cover;
+    flex-direction: column;
+
+}

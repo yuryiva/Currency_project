@@ -23,10 +23,10 @@
     text-decoration-color: ivory;
 }
 
-.news{
+.newsCard{
     display: flex;
     width: auto;
-    height: 500px;;
+    height: 60vw;
     overflow-y: scroll;
     margin: 2px;
     flex-wrap: wrap;
