@@ -1,4 +1,5 @@
 
+
 .infoPage {
   display: flex;
   flex-direction: row;
@@ -19,6 +20,6 @@
 }
 
 .findOutMore {
-  height: 5%;
+  height: 9%;
   padding: 10%;
 }
