@@ -44,14 +44,7 @@ class NewsBlockApi extends Component {
         {
           this.state.status?
           <p>too much requests</p>
-          :
-       
-
-
-
-
-
-         
+          :           
         this.state.getData 
         ?        
         <div> {this.state.newsData.map((content, index) => (<NewsBlock  
