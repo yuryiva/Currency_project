@@ -17,7 +17,7 @@ class NewsBlockApi extends Component {
   state={
     getData:false,
     newsData:[],
-
+    status:'',
   }
 
 
@@ -39,12 +39,12 @@ class NewsBlockApi extends Component {
   render() {
     return (
       <div className="newsCard newsPage" >
-        { this.state.newsData.map((content, index) => (<NewsBlock  
+        {/* { this.state.newsData.map((content, index) => (<NewsBlock  
         key={index}
         title={content.title}
         image={content.urlToImage}
         description={content.description}
-        author={content.author}        
+        author={content.author}         */}
         />
         ))
       }
