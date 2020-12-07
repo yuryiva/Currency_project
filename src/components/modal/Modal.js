@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../button/Button';
+// import Button from '../button/Button';    val:add this line to comment,  becouse this is never used, & node show's mistake
 import './Modal.css';
 
 const Modal = (props) => (
