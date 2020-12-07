@@ -15,9 +15,9 @@ import './newsBlock.css'
 class NewsBlockApi extends Component {
 
   state={
-    getData:false,
+    getData: false,
     newsData:[],
-    status:'',
+    status: "error"
   }
 
 
@@ -27,7 +27,9 @@ class NewsBlockApi extends Component {
     .then(urlNews =>  urlNews.json())  
     .then(newsApiJson => this.setState({
       newsData: newsApiJson.articles,
-      getData: true
+      getData: true,
+      status:newsApiJson.status
+
     })
     )
     
@@ -38,16 +40,33 @@ class NewsBlockApi extends Component {
 
   render() {
     return (
-      <div className="newsCard newsPage" >
-        {/* { this.state.newsData.map((content, index) => (<NewsBlock  
+      <div className="newsCard" >
+        {
+          this.state.status?
+          <p>too much requests</p>
+          :
+       
+
+
+
+
+
+         
+        this.state.getData 
+        ?        
+        <div> {this.state.newsData.map((content, index) => (<NewsBlock  
         key={index}
         title={content.title}
         image={content.urlToImage}
         description={content.description}
-        author={content.author}         */}
+        author={content.author}        
         />
-        ))
-      }
+        ))}
+        </div>
+        :
+        <p>loading</p>
+      } 
+
       </div> 
     )
   }
