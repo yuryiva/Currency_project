@@ -35,10 +35,10 @@ const renderClasses = ()=> {
             <li className="link"><Link to="/">Home</Link></li>
              <li className="link"><Link to="/News">News</Link></li>
              <li className="link"><Link to="/Charts">Charts</Link></li>
-             <li className="link"><Link to="/About">About</Link></li>
+             <li className="link"><Link to="/Info">Info</Link></li>
          </ul>
          {
-           navLinkOpen == false ?
+           navLinkOpen === false ?
          
          <div onClick={handleNavlinksToggle} className="hamburger-toggle">
              <i className = "fas fa-bars fa-lg"></i>

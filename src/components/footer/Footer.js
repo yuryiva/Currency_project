@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button from '../button/Button';
 import Modal from '../modal/Modal';
 import './Footer.css';
-import Logo from './cut.png'
+// import Logo from './cut.png'      val:add this line to comment,  becouse this is never used, & node show's mistake
 
 class Footer extends Component {
 
