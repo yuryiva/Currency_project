@@ -37,13 +37,13 @@
     border-radius: 5px;
     box-shadow: -4px 4px 30px 5px rgba(44, 23, 231, 0.109);
 }
-.newsBlock{
-    
+.newsBlock{    
     overflow: hidden;
-    display:block;
-    width: 30%;
-    background-color: rgba(159, 170, 165, 0.521);
+    display:flex;
+    flex-direction: column;
     height: 250px;
+    width: 30%;
+    background-color: rgba(159, 170, 165, 0.521);  
     border: 1px solid darkblue;
     border-radius: 5px;
     box-shadow: -4px 4px 10px 5px rgba(44, 23, 231, 0.151);

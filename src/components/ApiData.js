@@ -176,8 +176,8 @@ deleteFavorite=(index)=>{
                    
                     <div className="favorite-container" id='favorite-container' onClick={() => this.chooseFavorite(character.id)}>
                     
-                      <i class="fab fa-mixer" onClick={()=>this.deleteFavorite(index)}></i>
-                        <img src={character.image} alt="image"/>
+                      <i className="fab fa-mixer" onClick={()=>this.deleteFavorite(index)}></i>
+                        <img src={character.image} alt={character.id}/>
                     </div>
                    
                       
@@ -214,7 +214,7 @@ deleteFavorite=(index)=>{
                         />
                       </div>
                             <div className="plus" style={{ display: this.state.data[index].showPlus ? 'block' : 'none' }} onClick={() => this.addToFavorite(character)}>
-                            <i class="fas fa-plus-square"></i>
+                            <i className="fas fa-plus-square"></i>
                             </div>
                       </div>
                   )
