@@ -1,77 +1,107 @@
-
-.footer{
-    border: 1px solid black;
-    display: flex;
-    flex-direction: row;
-    background-image: url('./img.jpeg');
-    background-size: cover;
-    height: 10vh;
+.footer {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  background-image: url("./img.jpeg");
+  background-size: cover;
+  height: 10vh;
 }
 
 .pictureDiv {
-    width: 40%;
-    display: flex;
-    font-size: 40px;
+  width: 40%;
+  display: flex;
+  font-size: 40px;
 }
 
 img {
-    width:50%;
-    height: 100%;
+  width: 50%;
+  height: 100%;
 }
 
 .columnDiv {
-    width: 30%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-size: 24px;
-    color: rgba(255,255,255, 0.85);
+  width: 30%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .aboutUs {
-    
-    position: fixed;
-    z-index: 1;
-    bottom: 15%;
-    left: 27%;
-    width: 20%;
-    height: 150px;
-    background-image: url(https://onlineplus.com.au/wp-content/uploads/2016/11/slider-background-1.jpg);
-    padding: 10px;
-    box-shadow: 50px 50px 200px 80px rgba(0,0,0,0.4);
-    border-radius: 5px;
-    color: rgb(51, 45, 179);
-    font-size: 16px;
+  position: fixed;
+  z-index: 1;
+  bottom: 10%;
+  left: 27%;
+  width: 15%;
+  height: 150px;
+  background-image: url(https://static3.banki.ru/ugc/80/1c/23/4b/59e215159aa990.98940599_Fotolia_176388778_Subscription_Monthly_M_copy.jpg);
+  padding: 10px;
+  box-shadow: 50px 50px 200px 80px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  font-size: 20px;
+  color: black;
 }
 
-
-.faq{
-    position: fixed;
-    z-index: 1;
-    bottom: 12%;
-    left: 25%;
-    width: 60%;
-    height: 530px;
-    background-image: url(https://onlineplus.com.au/wp-content/uploads/2016/11/slider-background-1.jpg);
-    padding: 10px;
-    box-shadow: 50px 50px 200px 80px rgba(54, 54, 54, 0.4);  
-    border-radius: 5px;
-    color: rgb(221, 221, 221);
-    font-size: 16px;
+.aboutUs {
+  overflow: scroll;
+}
+.aboutUs::-webkit-scrollbar {
+  display: none;
+}
+.myscrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
+.faq {
+  position: fixed;
+  z-index: 1;
+  bottom: 10%;
+  left: 25%;
+  width: 60%;
+  height: 530px;
+  background-image: url(https://static3.banki.ru/ugc/80/1c/23/4b/59e215159aa990.98940599_Fotolia_176388778_Subscription_Monthly_M_copy.jpg);
+  background-size: cover;
+  padding: 10px;
+  box-shadow: 50px 50px 200px 80px rgba(54, 54, 54, 0.4);
+  border-radius: 5px;
+  font-size: 20px;
+  color: black;
+}
 
-.contactUs{
-    position: fixed;
-    z-index: 1;
-    bottom: 20%;
-    right: 5%;
-    width: 20%;
-    height: 60px;
-    background-image: url(https://onlineplus.com.au/wp-content/uploads/2016/11/slider-background-1.jpg);
-    padding: 10px;
-    box-shadow: 50px 50px 200px 80px rgba(151, 151, 151, 0.4);  
-    border-radius: 5px;
-    color: rgb(96, 79, 160);
-    font-size: 16px;
+.faq {
+  overflow: scroll;
+}
+.faq::-webkit-scrollbar {
+  display: none;
+}
+.myscrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.contactUs {
+  position: fixed;
+  z-index: 1;
+  bottom: 10%;
+  right: 11%;
+  width: 20%;
+  height: 9%;
+  background-image: url(https://static3.banki.ru/ugc/80/1c/23/4b/59e215159aa990.98940599_Fotolia_176388778_Subscription_Monthly_M_copy.jpg);
+  padding: 10px;
+  box-shadow: 50px 50px 200px 80px rgba(151, 151, 151, 0.4);
+  border-radius: 5px;
+  font-size: 20px;
+  color: black;
+}
+
+.contactUs {
+  overflow: scroll;
+}
+.contactUs::-webkit-scrollbar {
+  display: none;
+}
+.myscrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

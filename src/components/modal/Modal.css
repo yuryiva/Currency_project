@@ -1,6 +1,7 @@
-.closeBtn{
-    background-color: lemonchiffon;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
+.closeBtn {
+  background-color: lemonchiffon;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
