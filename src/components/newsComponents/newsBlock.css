@@ -7,11 +7,12 @@
     box-shadow: -4px 4px 10px 5px rgba(44, 23, 231, 0.151);
     font-style: italic;
 }
-.newsBlockImage{
-    max-height:40%;
-    min-height: 30%;
-}
+
+
 .newsBlockText{
     flex-wrap: wrap;
     font-size: 1.5vw;
+}
+.newsBlockImage{
+    height:max-content
 }

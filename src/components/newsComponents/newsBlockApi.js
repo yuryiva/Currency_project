@@ -42,7 +42,8 @@ class NewsBlockApi extends Component {
     return (
       <div className="newsCard" >
         {
-          this.state.status?
+          this.state.status === "error"
+          ?
           <p>too much requests</p>
           :           
         this.state.getData 
