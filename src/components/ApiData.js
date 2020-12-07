@@ -72,11 +72,23 @@ arrayOfCoinsToShow[index].show = !this.state.data[index].show
 
 
   chooseFavorite=(id)=>{
+    try{
     let filterCoin = this.state.data.filter((coin) =>
       coin.id.toLowerCase().includes(this.state.search.toLowerCase()) || coin.symbol.toLowerCase().includes(this.state.search.toLowerCase()))
     let indexOfCoin =  filterCoin.findIndex(coin=> coin.id === id)
-
     this.chooseCoin(indexOfCoin);
+  } 
+    
+    catch(err){
+      this.setState({
+        search: ''
+       })
+      
+      let ds = document.getElementById('favorite-container');
+     ds.click()
+    }
+     
+    
   }
 
 
@@ -106,7 +118,7 @@ showPlus=(index)=>{
     data: arrayOfCoinsToShow
    })
 
- this.timer(index);
+//  this.timer(index);
     
 
    
@@ -160,7 +172,7 @@ deleteFavorite=(index)=>{
                 
                   return (
                    
-                    <div className="favorite-container" onClick={() => this.chooseFavorite(character.id)}>
+                    <div className="favorite-container" id='favorite-container' onClick={() => this.chooseFavorite(character.id)}>
                     
                       <i class="fab fa-mixer" onClick={()=>this.deleteFavorite(index)}></i>
                         <img src={character.image}/>
@@ -191,7 +203,7 @@ deleteFavorite=(index)=>{
                   return (
                     
                       <div className="coinFullInfo">
-                      <div className={this.state.data[index].show  ? "active" : "notActive"} onClick={() => this.chooseCoin(index)} onMouseEnter={()=>this.showPlus(index)}>
+                      <div className={this.state.data[index].show  ? "active" : "notActive"} onClick={() => this.chooseCoin(index)} onMouseOver={()=>this.showPlus(index)}>
                           
                         <Coin
                           id={character.id}
