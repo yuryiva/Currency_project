@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Button from "../button/Button";
 import Modal from "../modal/Modal";
 import "./Footer.css";
-import Logo from "./cut.png";
 import { faq } from "../modal/FaqData";
 import AboutUsModal from "../modal/AboutUsModal";
 import ContactUsModal from "../modal/ContactUsModal";
@@ -68,11 +67,7 @@ class Footer extends Component {
         <div className="columnDiv">
           <Button onBtnClick={this.onBtnContactClick} name={"Contact"} />
           {this.state.showContact && (
-            <ContactUsModal
-              className="contactUs"
-
-              close={this.onBtnClose}
-            />
+            <ContactUsModal className="contactUs" close={this.onBtnClose} />
           )}
         </div>
       </div>
