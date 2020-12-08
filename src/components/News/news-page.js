@@ -1,16 +1,27 @@
 import React, { Component } from 'react'
-import NewsBlockApi from '../newsComponents/newsBlockApi'
+import ApiNewsNYT from "./nytApi/ApiNewsNYT";
 
 import  './news-page.css'
 
 class NewsPage extends Component {
+
+
+
+
+
+
+
+
+
+
+
     render() {
         return (
-            <div className='newsPage'>
-                <div >
-                    <NewsBlockApi />
+            
+                <div>
+                  <ApiNewsNYT />
                 </div>
-            </div>
+            
         )
     }
 }
