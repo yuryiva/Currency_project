@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import '../css/ApiData.css'
 import Coin from "./Coin"
 import Chart1 from './Chart1'
@@ -29,15 +29,17 @@ class App extends Component {
       .then(response => (response.json()))
       .then(dataFromApi => {
 
-        let dataWithNewProperties = dataFromApi.map(coin => ({...coin, show:false, showPlus:false}))
-        
+        let dataWithNewProperties = dataFromApi.map(coin => (  {...coin, show:false, showPlus:false}))
+     
 
         this.setState({
           data: dataWithNewProperties,
           apiLoaded: true,
         })
-        
+       
       })
+
+    
   }
 
   handleChange = (event) =>

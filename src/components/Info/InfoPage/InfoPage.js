@@ -21,10 +21,10 @@ class InfoPage extends Component {
     return (
       <div className="infoPage">
         <aside className="questionsList">
-          <h1 className='findOutMore'>FIND OUT MORE:</h1>
-          {AllData.map((object,index) => (
+          <h1 className="findOutMore">FIND OUT MORE:</h1>
+          {AllData.map((object, index) => (
             <Question
-            key={index}
+              key={index}
               action={this.hideBasicAnswer}
               question={object.question}
               where={object.path}
