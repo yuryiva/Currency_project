@@ -30,7 +30,19 @@ class App extends Component {
       .then(dataFromApi => {
 
         let dataWithNewProperties = dataFromApi.map(coin => (  {...coin, show:false, showPlus:false}))
+
+       
+       
+          // store in Localstorage:
+
+          // localStorage.clear()
+          // let prepareToStarage = dataFromApi.map(coin => (
+          //   {Coin: coin.id, Date: coin.last_updated, Price_$: coin.current_price}
+          // ))
+          
+          //   localStorage.setItem('secondData', JSON.stringify(prepareToStarage))
      
+         //
 
         this.setState({
           data: dataWithNewProperties,
@@ -41,6 +53,8 @@ class App extends Component {
 
     
   }
+
+
 
   handleChange = (event) =>
     this.setState({
@@ -154,7 +168,22 @@ deleteFavorite=(index)=>{
   })
 }
 
+// Attempt store data:
 
+attemptToStore=()=>{
+  setTimeout(() => {
+
+fetch(apiUrl)
+      .then(response => (response.json()))
+      .then(dataFromApi => {
+
+        let storeData= dataFromApi.map(coin => (  {...coin, show:false, showPlus:false}))
+        
+      })
+    }, 1000);
+    }
+
+//
 
 
   render() {
