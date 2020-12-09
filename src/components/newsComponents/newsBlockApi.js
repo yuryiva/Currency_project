@@ -9,7 +9,7 @@ import './newsBlock.css'
 
 
 
-//apicall other way
+
 
 
 class NewsBlockApi extends Component {

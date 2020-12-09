@@ -22,7 +22,6 @@ import '../news-page.css'
         status: newsJson.status,
       }))}
 
-  array(title, ) = this.state.newsData
 
   
 

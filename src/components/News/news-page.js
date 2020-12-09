@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import  './news-page.css'
+import NewsBlockApi from '../newsComponents/newsBlockApi'
+
 
 class NewsPage extends Component {
 
@@ -17,7 +19,7 @@ class NewsPage extends Component {
         return (
             
                 <div>
-                    <NewsPage />
+                    <NewsBlockApi />
                 </div>
             
         )
