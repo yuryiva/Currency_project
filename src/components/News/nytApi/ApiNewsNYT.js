@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import apiNYT from '../newsUrl';
 import NewsBlock from '../../newsComponents/newsBlock'
-
+import '../news-page.css'
 
  class ApiNewsNYT extends Component {
   state = {
@@ -15,40 +15,39 @@ import NewsBlock from '../../newsComponents/newsBlock'
   componentDidMount() {
     fetch(apiNYT)
 
-    .then (news => news.json())
+    .then (news => (news.json()))
       .then(newsJson => this.setState({
-        newsData: newsJson.results,
+        newsData: newsJson.results[2],
         getData: true,
         status: newsJson.status,
       }))}
 
- array = this.state.newsData
+  array(title, ) = this.state.newsData
 
   
 
   render() {
-    console.log(Object.values(this.array))
     return (
       <div>
+
+     { this.state.newsData.title}<h1>hello</h1>
+{/* 
         {this.state.getData ?          
         
         `${this.state.status==='error'? 
         <h1>Error</h1>
         :
-           <div>{this.array}</div>
-        // this.state.newsData.map((results, index) => (<NewsBlock  
-        //   key={index}
-        //   title={results.title}
-        //   image={results.urlToImage}
-        //   description={results.description}
-        //   author={results.author} />
-        //   ))
+        this.state.newsData.map((result, index) => (<div>  
+          key={index}
+          title={result.title}
+          </div>
+          ))
          }`
 
 
 
         :<p>Loading...</p> 
-      }
+      } */}
       </div>
     )
   }

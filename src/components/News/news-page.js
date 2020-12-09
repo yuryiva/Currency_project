@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import ApiNewsNYT from "./nytApi/ApiNewsNYT";
-
 import  './news-page.css'
 
 class NewsPage extends Component {
@@ -19,7 +17,7 @@ class NewsPage extends Component {
         return (
             
                 <div>
-                  <ApiNewsNYT />
+                    <NewsPage />
                 </div>
             
         )

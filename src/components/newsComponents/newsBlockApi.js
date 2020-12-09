@@ -48,15 +48,16 @@ class NewsBlockApi extends Component {
           :           
         this.state.getData 
         ?        
-        <div> {this.state.newsData.map((content, index) => (<NewsBlock  
+         this.state.newsData.map((content, index) => (<NewsBlock  
         key={index}
         title={content.title}
         image={content.urlToImage}
         description={content.description}
-        author={content.author}        
+        author={content.author}
+        content={content}        
         />
-        ))}
-        </div>
+        ))
+        
         :
         <p>loading</p>
       } 
