@@ -13,7 +13,7 @@ function NewsBlock (props) {
         </h4>
         
         <img className='newsBlockImage' src={props.image} alt={props.title}/>
-         <button>more</button> 
+    <button onClick={()=>props.content}>more</button> 
          <p>{props.description} </p>
          <h6>{props.author}</h6>
 
