@@ -18,12 +18,14 @@ class App extends Component {
     data: {},
     search: 'eth',
     winner: false,
-    favoriteCoin:[]
+    favoriteCoin:[],
+    dataForChart: {}
   }
 
 
 
   componentDidMount() {
+
 
     fetch(apiUrl)
       .then(response => (response.json()))
@@ -43,17 +45,25 @@ class App extends Component {
           //   localStorage.setItem('secondData', JSON.stringify(prepareToStarage))
      
          //
+        
+        
 
         this.setState({
           data: dataWithNewProperties,
           apiLoaded: true,
+          
         })
        
       })
-
-    
+      setInterval(
+        ()=>this.storeData(),
+        1000
+      );
   }
-
+  // componentWillUnmount() {
+  //   clearInterval(this.timerID);
+  // }
+  
 
 
   handleChange = (event) =>
@@ -170,18 +180,29 @@ deleteFavorite=(index)=>{
 
 // Attempt store data:
 
-attemptToStore=()=>{
-  setTimeout(() => {
 
-fetch(apiUrl)
-      .then(response => (response.json()))
-      .then(dataFromApi => {
 
-        let storeData= dataFromApi.map(coin => (  {...coin, show:false, showPlus:false}))
-        
-      })
-    }, 1000);
+storeData() {
+  fetch(apiUrl)
+  .then(response => (response.json()))
+  .then(dataFromApi => {
+     
+     let toStoreData = dataFromApi.map(coin => ( {arr: [] }))
+    let toNeedData = dataFromApi.map(coin => ({ Date: coin.last_updated, Price_$: coin.current_price } ))
+       
+    for(let i=0; i< toNeedData.length; i++){
+       if(toStoreData[i].arr.length <10){
+       toStoreData[i].arr.push(toNeedData[i])
+       } else  {toStoreData[i].arr.shift() }
+       
     }
+  
+  this.setState({
+    dataForChart: toStoreData
+  });
+})
+}
+
 
 //
 
