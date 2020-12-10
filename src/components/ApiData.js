@@ -10,6 +10,11 @@ const apiUrl = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&o
 
 
 
+let toStoreData = []
+   for(let i=0; i<100; i++){
+     toStoreData.push({ i: [] })
+   }
+
 
 class App extends Component {
 
@@ -19,7 +24,7 @@ class App extends Component {
     search: 'eth',
     winner: false,
     favoriteCoin:[],
-    dataForChart: {}
+    dataForChart: []
   }
 
 
@@ -181,27 +186,27 @@ deleteFavorite=(index)=>{
 // Attempt store data:
 
 
-
 storeData() {
   fetch(apiUrl)
-  .then(response => (response.json()))
-  .then(dataFromApi => {
-     
-     let toStoreData = dataFromApi.map(coin => ( {arr: [] }))
-    let toNeedData = dataFromApi.map(coin => ({ Date: coin.last_updated, Price_$: coin.current_price } ))
-       
-    for(let i=0; i< toNeedData.length; i++){
-       if(toStoreData[i].arr.length <10){
-       toStoreData[i].arr.push(toNeedData[i])
-       } else  {toStoreData[i].arr.shift() }
-       
-    }
-  
-  this.setState({
-    dataForChart: toStoreData
-  });
-})
+    .then(response => (response.json()))
+    .then(dataFromApi => {
+      
+      let toNeedData = dataFromApi.map((coin,index) => ({ Date: coin.last_updated, Price_$: coin.current_price }))
+      
+      for (let i = 0; i < toNeedData.length; i++) {
+        if (toStoreData[i]) {
+          if (toStoreData[i].arr.length < 10) {
+            toStoreData[i].arr.push(toNeedData[i])
+          } else { toStoreData[i].arr.shift() }
+        }
+      }
+      this.setState({
+        dataForChart: toStoreData
+      });
+    })
 }
+
+
 
 
 //
@@ -293,7 +298,9 @@ storeData() {
                  
          }
           </div>  
+
                <div className="chartContainer">
+                       
                         <Chart1
                          data={ [
                                 { Date: character.last_updated, Price_$: character.current_price },]}
