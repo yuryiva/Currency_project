@@ -30,7 +30,7 @@ img {
 .aboutUs {
   position: fixed;
   z-index: 1;
-  bottom: 10%;
+  bottom: 11%;
   left: 27%;
   width: 15%;
   height: 150px;
@@ -56,7 +56,7 @@ img {
 .faq {
   position: fixed;
   z-index: 1;
-  bottom: 10%;
+  bottom: 11%;
   left: 25%;
   width: 60%;
   height: 530px;
@@ -83,7 +83,7 @@ img {
 .contactUs {
   position: fixed;
   z-index: 1;
-  bottom: 10%;
+  bottom: 11%;
   right: 11%;
   width: 20%;
   height: 9%;

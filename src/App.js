@@ -7,8 +7,8 @@ import TradeWithUs from './components/TradeWithUs';
 import CryptoNews from './components/News';
 import Footer from './components/footer/Footer';
 import InfoPage from "./components/Info/InfoPage/InfoPage";
-import NewsPage from "./components/News/news-page";
 import ChartsPage from "./components/Charts/chart-page";
+import HeaderNews from './components/headerNewsMenu/HeaderNews/HeaderNews';
 
 
 
@@ -22,7 +22,7 @@ function App() {
                   
           <Switch>
            <Route path="/Info" component={InfoPage} />          
-           <Route path="/News" component={NewsPage} />
+           <Route path="/News" component={HeaderNews} />
            <Route path="/Charts" component={ChartsPage} />
            <Route exact path="/" >
               <ApiData />

@@ -1,0 +1,43 @@
+
+.newsBox {
+  width: 450px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  border: 10px solid rgb(151, 154, 155);
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.newsBox:hover {
+  border: 10px solid rgb(231, 173, 78);
+}
+
+.imgContainer {
+  width: 30%;
+  height: auto;
+  vertical-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-top: 5%;
+    
+}
+
+.dataContainer {
+  width: 70%;
+  height: auto;
+}
+
+.data {
+  font-size: medium;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
