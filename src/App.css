@@ -103,11 +103,32 @@ nav{
 .hamburger-krestik i{
   font-size: 30px;
 }
-
+/* link begining */
 link{
   letter-spacing: 6px;
   font-weight: bold;
+
 }
+.link{
+  transition-property: all;
+  transition-duration: .6s;
+  transition-timing-function: ease;
+  
+}
+.link:hover,
+.link:active {
+  letter-spacing: 3px;
+  transform:scale(1.1);
+  background-color: rgba(106, 111, 155, 0.3);
+  border-radius: 2px;
+  padding:5px;
+  font-weight: bolder;
+  font-style: black;
+}
+
+
+
+/* link ends */
 .Navbar{
   background: radial-gradient(at center center, #2d7e9270 0%, #1c40617c 100%), url("./sources/img.jpeg");
   background-size: 100%;
@@ -176,4 +197,7 @@ link{
     display: none;
   }
 }
+
+
+
 

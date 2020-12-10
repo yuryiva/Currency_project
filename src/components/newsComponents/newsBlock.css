@@ -1,6 +1,9 @@
+
+
+
+
 .newsBlockTitle{
-    display: flex;
-    justify-content:center;
+    font-size: 12px;
     background-image: repeating-linear-gradient(  #ffffff59 , #8a80df2a );
     border-radius: 3px;
     flex-wrap: wrap;
@@ -14,5 +17,10 @@
     font-size: 1.5vw;
 }
 .newsBlockImage{
-    height:max-content
+    height:50px;
+    width:auto;
 }
+.btn-news{
+    margin-right: 0%;
+}
+

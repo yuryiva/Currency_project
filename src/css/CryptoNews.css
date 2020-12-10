@@ -28,26 +28,50 @@
     width: auto;
     height: 60vw;
     overflow-y: scroll;
-    margin: 2px;
+    margin: 10px;
     flex-wrap: wrap;
-    min-width: 35%;
-    
+    min-width: 35%;    
     justify-content: center;
     border: 1px solid rgba(0, 0, 139, 0.164);
     border-radius: 5px;
     box-shadow: -4px 4px 30px 5px rgba(44, 23, 231, 0.109);
 }
-.newsBlock{    
+
+
+.newsCard::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;    
+  }
+  .newsCard::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+  }
+  .newsCard::-webkit-scrollbar-thumb {
+    background: rgb(90, 85, 119);
+    border-radius: 10px;
+
+  }
+.newsBlock{   
+    cursor: pointer; 
     overflow: hidden;
     display:flex;
     flex-direction: column;
-    height: 250px;
+    height: 25vh;
     width: 30%;
     background-color: rgba(159, 170, 165, 0.521);  
-    border: 1px solid darkblue;
+    border: 1px solid rgb(0, 0, 107);
     border-radius: 5px;
     box-shadow: -4px 4px 10px 5px rgba(44, 23, 231, 0.151);
     margin: 5px;
+    transition: ease-out 0.5s;
+}
+.newsBlock:hover{
+    transform:scale(1.05) ;
+    background-color: rgba(255, 255, 255, 0.755);
+    border: 1.5px solid rgb(172, 13, 13);
+    box-shadow: 10px 10px 10px 5px rgba(172, 13, 13, 0.521);
+    text-decoration-color: ivory;
+
 }
 /* .newsBlock */
 
