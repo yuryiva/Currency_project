@@ -7,7 +7,7 @@ function NewsBlock (props) {
 
 
     return (
-      <div className="newsBlock" >  <Link to="/News" >
+      <div className="newsBlock" >  <Link className='smthNew' to="/News" >
 
         <h4 className='newsBlockTitle' >{props.title}
         {/* <button className='btn-news' onClick={()=>props.content}>more</button>  */}

@@ -20,7 +20,7 @@ export default class HeaderNews extends Component {
   newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=6083f7655296403dbe11b0814fa23f2f`;
 
   //   newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=2020-12-09&sortBy=popularity&apiKey=8fbdc45f38704319840644466e6eaf15`
-  newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=2020-12-09&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f`;
+  newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${new Date}&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f`;
 
   componentDidMount() {
     fetch(this.newsByDefaultApi)
@@ -46,7 +46,7 @@ export default class HeaderNews extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     fetch(
-      `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=2020-12-09&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f`
+      `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${new Date}&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f`
     )
       .then((response) => response.json())
       .then((dataFromApi) =>
