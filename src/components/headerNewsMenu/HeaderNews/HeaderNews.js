@@ -6,8 +6,8 @@ import "./HeaderNews.css";
 // import '../NewsBox/NewsBox.css'
 
 ////****КЛЮЧИ ДЛЯ API НЕ ПРЯТАЛ. ПРОСЬБА ПОЛЬЗОВАТЬСЯ БЕЗ ФАНАТИЗМА
-// const newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=8fbdc45f38704319840644466e6eaf15`;
-// const newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=6083f7655296403dbe11b0814fa23f2f`;
+// 2 const newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=8fbdc45f38704319840644466e6eaf15`;
+// 1 const newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=6083f7655296403dbe11b0814fa23f2f`;
 
 export default class HeaderNews extends Component {
   state = {
@@ -16,11 +16,11 @@ export default class HeaderNews extends Component {
     inputValue: "",
   };
 
-  //   newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=8fbdc45f38704319840644466e6eaf15`;
-  newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=6083f7655296403dbe11b0814fa23f2f`;
+  
+  newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`;
 
-  //   newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=2020-12-09&sortBy=popularity&apiKey=8fbdc45f38704319840644466e6eaf15`
-  newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${new Date}&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f`;
+  
+  newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${new Date}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`;
 
   componentDidMount() {
     fetch(this.newsByDefaultApi)
@@ -46,7 +46,7 @@ export default class HeaderNews extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     fetch(
-      `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${new Date}&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f`
+      `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${new Date}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
     )
       .then((response) => response.json())
       .then((dataFromApi) =>
