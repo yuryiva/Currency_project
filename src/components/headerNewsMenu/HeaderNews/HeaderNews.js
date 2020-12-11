@@ -17,10 +17,13 @@ export default class HeaderNews extends Component {
   };
 
   
-  newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`;
+  newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=8fbdc45f38704319840644466e6eaf15`
+  
+  // ${process.env.REACT_APP_API_NEWS_KEY}
 
   
-  newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${new Date}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`;
+  newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${new Date}&sortBy=popularity&apiKey=8fbdc45f38704319840644466e6eaf15`
+  // ${process.env.REACT_APP_API_NEWS_KEY}
 
   componentDidMount() {
     fetch(this.newsByDefaultApi)
@@ -46,7 +49,9 @@ export default class HeaderNews extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     fetch(
-      `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${new Date}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
+      `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${new Date}&sortBy=popularity&apiKey=8fbdc45f38704319840644466e6eaf15`
+      
+      // ${process.env.REACT_APP_API_NEWS_KEY}
     )
       .then((response) => response.json())
       .then((dataFromApi) =>
