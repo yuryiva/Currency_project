@@ -5,8 +5,21 @@
   padding-left: 10%;
   padding-right: 10%;
   transition: ease-in 0.5s;
+  font-size: 25px;
+  font-weight: bold;
 }
 
-.question:hover{
+.question:hover {
   transform: scale(1.2);
+}
+
+@media screen and (max-width: 850px) {
+  .question {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .question {
+    font-size: 18px;
+  }
 }
