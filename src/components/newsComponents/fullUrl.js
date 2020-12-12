@@ -13,7 +13,7 @@ const dateOfNews = new Date();
 const valueOfNews ='30'
 
 const fullUrl = `${newsApiOne}q=${filterCategory}&to=${dateOfNews}&pageSize=${valueOfNews}&sortBy=publishedAt&language
-=en&apiKey=8fbdc45f38704319840644466e6eaf15`
+=en&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
 
 //// ${process.env.REACT_APP_API_NEWS_KEY}
 

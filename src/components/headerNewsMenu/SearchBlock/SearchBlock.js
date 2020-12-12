@@ -1,37 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SearchBlock.css";
-// import Calendar from 'react-calendar'
-// import 'react-calendar/dist/Calendar.css'
 
 const SearchBlock = (props) => {
-  // const [value, onChange] = useState(new Date());
   return (
     <div className="searchBlock">
-      <label className="label">
-        NEWS ON PARTICULAR TOPIC
-        <select onChange={(e) => props.handleTopicChoise(e)}>
+      <label className="newsOnTopicSection">
+        <p>NEWS ON PARTICULAR TOPIC</p>
+        <div>
+        <select className="input" onChange={(e) => props.handleTopicChoise(e)}>
           {props.topics}
         </select>
+        </div>
       </label>
 
-      <form onSubmit={(e) => props.handleKeyWordSubmit(e)}>
-        <label className="label">
-          NEWS BY KEYWORD
-          <input
-            className="input"
-            type="text"
-            value={props.value}
-            onChange={(e) => props.handleKeyWordChange(e)}
-          />
+      <form className="form" onSubmit={(e) => props.handleKeyWordSubmit(e)}>
+        <label className="newsOnKeyWordSection">
+          <p>NEWS BY KEYWORD</p>
+          <div>
+            <input
+              className="input"
+              type="text"
+              value={props.value}
+              onChange={(e) => props.handleKeyWordChange(e)}
+            />
+          </div>
         </label>
         <input className="searchButton" type="submit" value="SEARCH" />
       </form>
-
-      {/* <input type="date" max="2020-12-10" min="2020-11-12" value="2020-12-10"/> */}
-      {/* <Calendar
-        onChange={onChange}
-        value={value}
-      /> */}
     </div>
   );
 };
