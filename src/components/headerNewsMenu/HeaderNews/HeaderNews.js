@@ -42,9 +42,11 @@ export default class HeaderNews extends Component {
     topicChosen: "",
   };
 
-  newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=6083f7655296403dbe11b0814fa23f2f`;
+  newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
+  // 6083f7655296403dbe11b0814fa23f2f`;
 
-  newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f`;
+  newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
+  // 6083f7655296403dbe11b0814fa23f2f`;
   // ${process.env.REACT_APP_API_NEWS_KEY}`
 
   componentDidMount() {
@@ -71,7 +73,8 @@ export default class HeaderNews extends Component {
   handleKeyWordSubmit = (event) => {
     event.preventDefault();
     fetch(
-      `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${todayIs}&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f`
+      `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${todayIs}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
+      // 6083f7655296403dbe11b0814fa23f2f`
 
       // http://newsapi.org/v2/everything?q=dollar&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f
       // http://newsapi.org/v2/top-headlines?q=dollar&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f
@@ -99,7 +102,8 @@ export default class HeaderNews extends Component {
 
     setTimeout(() => {
       fetch(
-        `http://newsapi.org/v2/everything?q=${this.state.topicChosen}&from=${todayIs}&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f`
+        `http://newsapi.org/v2/everything?q=${this.state.topicChosen}&from=${todayIs}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
+        // 6083f7655296403dbe11b0814fa23f2f`
       )
         .then((response) => response.json())
         .then((dataFromApi) =>
