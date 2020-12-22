@@ -3,6 +3,8 @@ import Footer from "../../footer/Footer";
 import NewsBox from "../NewsBox/NewsBox";
 import SearchBlock from "../SearchBlock/SearchBlock";
 import "./HeaderNews.css";
+import moment from "moment";
+import Spinner from "./Spinner/Spinner";
 // import '../NewsBox/NewsBox.css'
 
 ////****КЛЮЧИ ДЛЯ API НЕ ПРЯТАЛ. ПРОСЬБА ПОЛЬЗОВАТЬСЯ БЕЗ ФАНАТИЗМА
@@ -39,13 +41,13 @@ export default class HeaderNews extends Component {
       { name: "Huobi", id: 16 },
     ],
 
-    topicChosen: "",
+    topicChosen: "Dash",
   };
 
-  newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
+  newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_NEWS_KEY_2}`;
   // 6083f7655296403dbe11b0814fa23f2f`;
 
-  newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
+  newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY_2}`;
   // 6083f7655296403dbe11b0814fa23f2f`;
   // ${process.env.REACT_APP_API_NEWS_KEY}`
 
@@ -70,53 +72,69 @@ export default class HeaderNews extends Component {
     });
   };
 
-  handleKeyWordSubmit = (event) => {
+  handleKeyWordSubmit = (event, userDate) => {
     event.preventDefault();
-    fetch(
-      `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${todayIs}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
-      // 6083f7655296403dbe11b0814fa23f2f`
-
-      // http://newsapi.org/v2/everything?q=dollar&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f
-      // http://newsapi.org/v2/top-headlines?q=dollar&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f
-
-      // 6083f7655296403dbe11b0814fa23f2f
-      // ${process.env.REACT_APP_API_NEWS_KEY}`
-    )
-      .then((response) => response.json())
-      .then((dataFromApi) =>
-        this.setState({
-          data: dataFromApi.articles,
-          dataFromApiReceived: true,
-          inputValue: "",
-        })
-      );
-    this.setState({
-      dataFromApiReceived: false,
-    });
-  };
-
-  handleTopicChoise = (event) => {
-    this.setState({
-      topicChosen: event.target.value,
-    });
-
-    setTimeout(() => {
+    if (this.state.inputValue === "") {
+      alert("please insert a keyword to search");
+    } else {
+      const finalDate = userDate
+        ? moment(userDate).format("YYYY-MM-DD")
+        : todayIs;
+      console.log(moment(userDate).format("YYYY-MM-DD"));
       fetch(
-        `http://newsapi.org/v2/everything?q=${this.state.topicChosen}&from=${todayIs}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
+        `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${finalDate}&to=${finalDate}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY_2}`
         // 6083f7655296403dbe11b0814fa23f2f`
+
+        // http://newsapi.org/v2/everything?q=dollar&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f
+        // http://newsapi.org/v2/top-headlines?q=dollar&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f
+
+        // 6083f7655296403dbe11b0814fa23f2f
+        // ${process.env.REACT_APP_API_NEWS_KEY}`
       )
         .then((response) => response.json())
         .then((dataFromApi) =>
           this.setState({
             data: dataFromApi.articles,
             dataFromApiReceived: true,
+            inputValue: "",
           })
         );
-
       this.setState({
         dataFromApiReceived: false,
       });
-    }, 1);
+    }
+  };
+
+  handleTopicSelector = (event) => {
+    this.setState({
+      topicChosen: event.target.value,
+    });
+  };
+
+  handleTopicChoise = (event, userDate) => {
+    event.preventDefault();
+    const finalDate = userDate
+      ? moment(userDate).format("YYYY-MM-DD")
+      : todayIs;
+
+    // console.log('hello', event.target.value);
+    // console.log(userDate);
+    // console.log(moment(userDate).format("YYYY-MM-DD"));
+    fetch(
+      `http://newsapi.org/v2/everything?q=${this.state.topicChosen}&from=${finalDate}&to=${finalDate}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY_2}`
+      // 6083f7655296403dbe11b0814fa23f2f`
+    )
+      .then((response) => response.json())
+      .then((dataFromApi) =>
+        this.setState({
+          data: dataFromApi.articles,
+          dataFromApiReceived: true,
+        })
+      );
+
+    this.setState({
+      dataFromApiReceived: false,
+    });
   };
 
   render() {
@@ -132,6 +150,7 @@ export default class HeaderNews extends Component {
           handleKeyWordChange={this.handleKeyWordChange}
           handleKeyWordSubmit={this.handleKeyWordSubmit}
           value={this.state.inputValue}
+          handleTopicSelector={this.handleTopicSelector}
         />
 
         {this.state.dataFromApiReceived === true ? (
@@ -146,7 +165,7 @@ export default class HeaderNews extends Component {
             />
           ))
         ) : (
-          <h1>LOADING...</h1>
+          <Spinner />
         )}
       </div>
     );
