@@ -44,10 +44,10 @@ export default class HeaderNews extends Component {
     topicChosen: "Dash",
   };
 
-  newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_NEWS_KEY_2}`;
+  newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`;
   // 6083f7655296403dbe11b0814fa23f2f`;
 
-  newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY_2}`;
+  newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`;
   // 6083f7655296403dbe11b0814fa23f2f`;
   // ${process.env.REACT_APP_API_NEWS_KEY}`
 
@@ -82,7 +82,7 @@ export default class HeaderNews extends Component {
         : todayIs;
       console.log(moment(userDate).format("YYYY-MM-DD"));
       fetch(
-        `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${finalDate}&to=${finalDate}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY_2}`
+        `http://newsapi.org/v2/everything?q=${this.state.inputValue}&from=${finalDate}&to=${finalDate}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
         // 6083f7655296403dbe11b0814fa23f2f`
 
         // http://newsapi.org/v2/everything?q=dollar&sortBy=popularity&apiKey=6083f7655296403dbe11b0814fa23f2f
@@ -121,7 +121,7 @@ export default class HeaderNews extends Component {
     // console.log(userDate);
     // console.log(moment(userDate).format("YYYY-MM-DD"));
     fetch(
-      `http://newsapi.org/v2/everything?q=${this.state.topicChosen}&from=${finalDate}&to=${finalDate}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY_2}`
+      `http://newsapi.org/v2/everything?q=${this.state.topicChosen}&from=${finalDate}&to=${finalDate}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
       // 6083f7655296403dbe11b0814fa23f2f`
     )
       .then((response) => response.json())
