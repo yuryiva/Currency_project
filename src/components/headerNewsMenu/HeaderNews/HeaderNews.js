@@ -44,7 +44,8 @@ export default class HeaderNews extends Component {
     topicChosen: "Dash",
   };
 
-  newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`;
+  // newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`;
+  newsByDefaultApi = `http://newsapi.org/v2/everything?q=crypto&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`;
   // 6083f7655296403dbe11b0814fa23f2f`;
 
   newsByRequestApi = `http://newsapi.org/v2/everything?q=${this.state.inputValue}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`;
