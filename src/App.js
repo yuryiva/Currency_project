@@ -9,6 +9,8 @@ import Footer from './components/footer/Footer';
 import InfoPage from "./components/Info/InfoPage/InfoPage";
 import ChartsPage from "./components/Charts/chart-page";
 import HeaderNews from './components/headerNewsMenu/HeaderNews/HeaderNews';
+import CoinSummaryPage from './Graph/pages/CoinSummaryPage';
+import CoinDetailPage from './Graph/pages/CoinDetailPage';
 
 
 
@@ -23,7 +25,8 @@ function App() {
           <Switch>
            <Route path="/Info" component={InfoPage} />          
            <Route path="/News" component={HeaderNews} />
-           <Route path="/Charts" component={ChartsPage} />
+           <Route path="/Charts" component={CoinSummaryPage} />
+           <Route path="/coins/:id" component={CoinDetailPage} />
            <Route exact path="/" >
               <ApiData />
               <CryptoNews/> 
