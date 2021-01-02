@@ -220,6 +220,7 @@ ul {
 .coinsummary {
   border-color: white !important;
   border-style: outset !important;
+  
 }
 
 .coin-data-category {
@@ -236,4 +237,13 @@ ul {
   display: block;
 }
 
+.back_btn{
+  display: flex;
+}
+.back_btn:hover{
+  text-decoration: none;
+}
 
+.dropdown{
+  display: flex;
+}

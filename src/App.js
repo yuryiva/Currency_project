@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch,  Route} from 'react-router-dom';
 import './App.css';
+
 import ApiData from './components/ApiData';
 import Navig from './components/Navig';
 import TradeWithUs from './components/TradeWithUs';
