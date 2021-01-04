@@ -1,7 +1,7 @@
 
 .mainPart {
-  background-image: url(./navbarNewsBackground.jpg);
-  background-size: cover;
+background-color: #fff; 
+ background-size: cover;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;

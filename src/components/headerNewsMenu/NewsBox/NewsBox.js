@@ -12,6 +12,7 @@ const NewsBox = (props) => {
       <div className="dataContainer">
         
           <a className='data' href={props.url}>{props.title}</a>
+          <a href={props.url}><p className='newsBlockDescription' >{props.description}</p></a>
         
       </div>
     </div>
