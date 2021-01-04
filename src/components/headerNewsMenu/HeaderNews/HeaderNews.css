@@ -1,9 +1,6 @@
-* {
-  border: 1px solid black;
-}
 .mainPart {
   /* background-image: url(./navbarNewsBackground.jpg); */
-  background-color:rgb(241, 241, 248);
+  background-color: rgb(241, 241, 248);
   background-size: cover;
   display: flex;
   justify-content: space-around;
