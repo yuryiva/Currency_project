@@ -6,8 +6,7 @@
 
 .cryptoNews{
     display: flex;
-    background-color: rgba(255, 255, 255, 0.493);
-    background-image: url(https://ciphertrace.com/wp-content/uploads/2019/03/compliance-risk-bg-min.jpg);
+    background-color: rgba(255, 255, 255, 0.836);
     background-size: cover;
     flex-direction: column;
 
@@ -56,9 +55,9 @@
     overflow: hidden;
     display:flex;
     flex-direction: column;
-    height: 25vh;
+    height: 250px;
     width: 30%;
-    background-color: rgba(159, 170, 165, 0.521);  
+    background-color: rgba(190, 190, 190, 0.678);  
     border: 1px solid rgb(0, 0, 107);
     border-radius: 5px;
     box-shadow: -4px 4px 10px 5px rgba(44, 23, 231, 0.151);
