@@ -23,7 +23,7 @@ export default class HeaderNews extends Component {
     dataFromApiReceived: false,
     inputValue: "",
     values: [
-      { name: "Dash", id: 1 },
+      { name: "Choose category", id: 1 },
       { name: "Bitcoin", id: 2 },
       { name: "IOTA", id: 3 },
       { name: "NEO", id: 4 },
@@ -41,7 +41,7 @@ export default class HeaderNews extends Component {
       { name: "Huobi", id: 16 },
     ],
 
-    topicChosen: "Dash",
+    topicChosen: "Bitcoin",
   };
 
   // newsByDefaultApi = `http://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`;
@@ -106,36 +106,41 @@ export default class HeaderNews extends Component {
     }
   };
 
-  handleTopicSelector = (event) => {
-    this.setState({
-      topicChosen: event.target.value,
-    });
-  };
+  // handleTopicSelector = (event) => {
+  //   this.setState({
+  //     topicChosen: event.target.value,
+  //   });
+  // };
 
   handleTopicChoise = (event, userDate) => {
     event.preventDefault();
-    const finalDate = userDate
-      ? moment(userDate).format("YYYY-MM-DD")
-      : todayIs;
-
-    // console.log('hello', event.target.value);
-    // console.log(userDate);
-    // console.log(moment(userDate).format("YYYY-MM-DD"));
-    fetch(
-      `http://newsapi.org/v2/everything?q=${this.state.topicChosen}&from=${finalDate}&to=${finalDate}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
-      // 6083f7655296403dbe11b0814fa23f2f`
-    )
-      .then((response) => response.json())
-      .then((dataFromApi) =>
-        this.setState({
-          data: dataFromApi.articles,
-          dataFromApiReceived: true,
-        })
-      );
-
     this.setState({
-      dataFromApiReceived: false,
+      topicChosen: event.target.value,
     });
+    setTimeout(() => {
+      const finalDate = userDate
+        ? moment(userDate).format("YYYY-MM-DD")
+        : todayIs;
+
+      // console.log('hello', event.target.value);
+      // console.log(userDate);
+      // console.log(moment(userDate).format("YYYY-MM-DD"));
+      fetch(
+        `http://newsapi.org/v2/everything?q=${this.state.topicChosen}&from=${finalDate}&to=${finalDate}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`
+        // 6083f7655296403dbe11b0814fa23f2f`
+      )
+        .then((response) => response.json())
+        .then((dataFromApi) =>
+          this.setState({
+            data: dataFromApi.articles,
+            dataFromApiReceived: true,
+          })
+        );
+
+      this.setState({
+        dataFromApiReceived: false,
+      });
+    }, 100);
   };
 
   render() {
