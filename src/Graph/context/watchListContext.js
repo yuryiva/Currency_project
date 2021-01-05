@@ -32,8 +32,11 @@ export const WatchListContextProvider = (props) => {
     }
   };
 
+
+  const [navLinkOpen, navLinkToggle] = useState(false);
+
   return (
-    <WatchListContext.Provider value={{ watchList, deleteCoin, addCoin }}>
+    <WatchListContext.Provider value={{ watchList, deleteCoin, addCoin, navLinkOpen, navLinkToggle }}>
       {props.children}
     </WatchListContext.Provider>
   );

@@ -1,15 +1,15 @@
 
-import React, {useState} from 'react';
+import React, { useContext} from 'react';
 import { Link} from 'react-router-dom';
 import '../App.css'
-
+import { WatchListContext } from "../Graph/context/watchListContext";
 
 
 
 
 const Navig= ()=>  {
-
- const [navLinkOpen, navLinkToggle] = useState(false);
+  const { navLinkOpen, navLinkToggle } = useContext(WatchListContext);
+ 
 
  const handleNavlinksToggle =() => {
    navLinkToggle(!navLinkOpen);
@@ -35,7 +35,6 @@ const renderClasses = ()=> {
             <ul className={renderClasses()}>
             <li className="link"><Link to="/">Home</Link></li>
              <li className="link"><Link to="/News">News</Link></li>
-             <li className="link"><Link to="/Charts">Charts</Link></li>
              <li className="link"><Link to="/Info">Info</Link></li>
          </ul>
          {

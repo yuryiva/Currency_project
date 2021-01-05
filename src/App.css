@@ -72,6 +72,7 @@ nav{
 }
 
 .logo h4{
+  font-size: 40px;
   margin-left: 20px;
   letter-spacing: 3px;
   padding-top: 10px;
@@ -130,7 +131,7 @@ link{
 
 /* link ends */
 .Navbar{
-  background: radial-gradient(at center center, #2d7e9270 0%, #1c40617c 100%), url("./sources/img.jpeg");
+  background: radial-gradient(at center center, #2d7e9270 0%, #1c40617c 100%), url("");
   background-size: 100%;
   background-position:center ;
  background-repeat: no-repeat;
@@ -189,6 +190,7 @@ link{
   .active{
     transform: translatex(0%);
   }
+
 }
 
 
@@ -202,7 +204,7 @@ link{
 
 
 body {
-  background-color: #263238;
+  background-color: rgb(26, 79, 88);
 }
 
 ul {
@@ -214,14 +216,23 @@ ul {
 }
 
 .coinlist-item {
-  display: flex;
+height: 120px;
+
+ 
 }
 
 .coinsummary {
-  border-color: white !important;
+  background-color: rgb(20, 125, 146) !important;
+  border-color: rgb(20, 125, 146) !important;
   border-style: outset !important;
-  
+  max-height: 500px;
+
+  -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
 }
+.coinsummary::-webkit-scrollbar {display: none;}
+
 
 .coin-data-category {
   font-size: 10px;
@@ -246,4 +257,13 @@ ul {
 
 .dropdown{
   display: flex;
+}
+
+
+@media screen and (max-width: 850px){
+
+ .coinsummary_none {
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in;
+ }
 }
