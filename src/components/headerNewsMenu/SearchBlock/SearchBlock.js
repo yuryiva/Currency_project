@@ -36,14 +36,12 @@ const SearchBlock = (props) => {
       <div className="searchOnTopicAndKeyWordSection">
         <form
         // onSubmit={(e) => props.handleTopicChoise(e, value)}
-        // className="newsOnTopicSection"
         >
-          <p className='titleNames'>NEWS BY CATEGORIES</p>
+          <p className="titleNames">NEWS BY CATEGORIES</p>
           <div>
             <select
               onChange={(e) => props.handleTopicChoise(e, value)}
               // props.handleTopicSelector(e)}
-              // className="input"
             >
               {props.topics}
             </select>
@@ -60,10 +58,8 @@ const SearchBlock = (props) => {
           className="searchByKeyWordForm"
           onSubmit={(e) => props.handleKeyWordSubmit(e, value)}
         >
-          <label
-          // className="newsOnKeyWordSection"
-          >
-            <p className='titleNames'>NEWS BY KEYWORD</p>
+          <label>
+            <p className="titleNames">NEWS BY KEYWORD</p>
             <div>
               <input
                 className="input"
