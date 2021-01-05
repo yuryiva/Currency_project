@@ -14,8 +14,10 @@
     font-size: 1.5vw;
 }
 .newsBlockImage{
-    height:20px;
-    width:auto;
+    height:auto;
+    width:150px;
+    margin: 0%;
+    padding: 0%;
 }
 .btn-news{
     margin-right: 0%;
