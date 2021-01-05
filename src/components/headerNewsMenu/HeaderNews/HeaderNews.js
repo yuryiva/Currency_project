@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Footer from "../../footer/Footer";
+import Footer from "../../footer/containers/Footer";
 import NewsBox from "../NewsBox/NewsBox";
 import SearchBlock from "../SearchBlock/SearchBlock";
 import "./HeaderNews.css";

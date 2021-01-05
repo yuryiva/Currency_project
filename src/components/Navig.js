@@ -33,9 +33,9 @@ const renderClasses = ()=> {
             <h4>Wild Traders</h4>
             </div>
             <ul className={renderClasses()}>
-            <li className="link"><Link to="/">Home</Link></li>
-             <li className="link"><Link to="/News">News</Link></li>
-             <li className="link"><Link to="/Info">Info</Link></li>
+            <li className="link"><Link to="/" onClick={handleNavlinksToggle}>Home</Link></li>
+             <li className="link"><Link to="/News" onClick={handleNavlinksToggle}>News</Link></li>
+             <li className="link"><Link to="/Info" onClick={handleNavlinksToggle}>Info</Link></li>
          </ul>
          {
            navLinkOpen === false ?
