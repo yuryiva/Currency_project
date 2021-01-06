@@ -11,9 +11,9 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+   
     minWidth: 345,
-    maxHeight: 370,
+   
     minHeight: 370
   },
   media: {
@@ -25,7 +25,7 @@ export default function NewsBlock(props) {
   const classes = useStyles();
 
   return (
-    <div className='single_newsCard'>
+    <div className= {props.class == 0 ? 'single_newsCard_one': 'single_newsCard' }>
     <Card className={classes.root}>
       <CardActionArea>
       <Link className='smthNew' to="/News" >

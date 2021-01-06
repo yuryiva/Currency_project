@@ -51,6 +51,7 @@ class NewsBlockApi extends Component {
           
          this.state.newsData.map((content, index) => (<NewsBlock  
         key={index}
+        class={index}
         title={content.title}
         image={content.urlToImage}
         description={content.description}

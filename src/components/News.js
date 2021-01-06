@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import NewsBlockApi from './newsComponents/newsBlockApi';
 
-
 import '../css/CryptoNews.css';
 
  class CryptoNews extends Component {
