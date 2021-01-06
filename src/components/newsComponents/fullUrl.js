@@ -10,7 +10,7 @@
 const newsApiOne =`http://newsapi.org/v2/everything?`;
 const filterCategory = 'bitcoin';
 const dateOfNews = new Date();
-const valueOfNews ='20'
+const valueOfNews ='15'
 
 const fullUrl = `${newsApiOne}q=${filterCategory}&to=${dateOfNews}&pageSize=${valueOfNews}&sortBy=publishedAt&language
 =en&apiKey=${process.env.REACT_APP_API_NEWS_KEY}`

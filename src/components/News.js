@@ -13,7 +13,7 @@ import '../css/CryptoNews.css';
           <h1 style={{color:'ivory'}}>Cryptocurrency News</h1>
         </div>
 
-        <div className=''>
+        <div >
           <div> <NewsBlockApi /> </div> 
                 
         </div>

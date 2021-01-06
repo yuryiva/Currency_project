@@ -267,3 +267,26 @@ height: 120px;
   transition: transform 0.5s ease-in;
  }
 }
+
+.newsCard{
+  display:grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.descr{
+  height: 200px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  
+}
+.descr::-webkit-scrollbar {display: none;}
+
+.single_newsCard{
+  border-radius: 5px;
+}
+.newsCard:nth-child(1){
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}

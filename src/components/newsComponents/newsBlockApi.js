@@ -47,7 +47,8 @@ class NewsBlockApi extends Component {
           <p>too much requests</p>
           :           
         this.state.getData 
-        ?        
+        ?    
+          
          this.state.newsData.map((content, index) => (<NewsBlock  
         key={index}
         title={content.title}
@@ -56,6 +57,7 @@ class NewsBlockApi extends Component {
         author={content.author}
         content={content}        
         />
+        
         ))
         
         :
