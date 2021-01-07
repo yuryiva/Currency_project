@@ -16,7 +16,7 @@ class CoinMoreStuff extends Component {
         <>
 
              { <div className="moreStufs">
-    <p className="coin-price">${this.props.price}</p>
+    <p className="coin-price">${this.props.price}/usd</p>
     <p className="coin-volume">${this.props.volume.toLocaleString()}</p>
             {this.props.priceChange < 0 ? (
                 <p className="coin-percent red"><i className="fas fa-long-arrow-alt-down"></i>{this.props.priceChange.toFixed(2).replace(/-/, ' ')}%</p>
