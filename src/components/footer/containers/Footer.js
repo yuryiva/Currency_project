@@ -10,8 +10,8 @@ export default function FooterContainer() {
                 <Footer.Column>
                 <Footer.Title>About Us</Footer.Title>
                     <Footer.Link href="#">Nikolai</Footer.Link>
-                    <Footer.Link href="https://github.com/valiant9191">Valentine</Footer.Link>
-                    <Footer.Link href="https://github.com/yuryiva#">Yuriy</Footer.Link>
+                    <Footer.Link href="https://github.com/valiant9191" target='_blank'>Valentine</Footer.Link>
+                    <Footer.Link href="https://github.com/yuryiva#" target='_blank'>Yury</Footer.Link>
                 </Footer.Column>
                
                 <Footer.Column>

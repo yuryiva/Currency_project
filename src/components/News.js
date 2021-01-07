@@ -1,12 +1,16 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import NewsBlockApi from './newsComponents/newsBlockApi';
+import { WatchListContext } from "../Graph/context/watchListContext";
+
 
 import '../css/CryptoNews.css';
 
- class CryptoNews extends Component {
-  render() {
+ const CryptoNews = () => {
+
+  const { navLinkOpen } = useContext(WatchListContext);
+ 
     return (
-      <div className='cryptoNews'>
+      <div className= { navLinkOpen ? "cryptoNews_none" : 'cryptoNews'}>
 
         <div className='heading'>
           <h1 style={{color:'ivory'}}>Cryptocurrency News</h1>
@@ -19,7 +23,7 @@ import '../css/CryptoNews.css';
 
       </div>
     )
-  }
+  
 }
 
 
