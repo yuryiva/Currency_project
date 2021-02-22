@@ -1,8 +1,7 @@
 Wild Traders
 
-Website about cryptocurrencies
-
-
+Website about cryptocurrencies, their rates and also news related to cryptocurrencies.
+Build using external APIs to get the rates data and news. React-based. 
 
 
 Trello - https://trello.com/b/poprlYmW/currency       
@@ -13,6 +12,5 @@ wireframes - https://www.figma.com/file/fwCnah2HWMyCng8cQCoIyD/project2(wlc-scho
 Contributors: 
 Dzmitry ps https://github.com/DzmitryPS       
 Yury Ivashchanka https://github.com/yuryiva         
-Nikolai         
 Kolko Valentin https://github.com/valiant9191         
 @WildCodeSchool
