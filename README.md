@@ -1,7 +1,6 @@
 Wild Traders
 
-Website about cryptocurrencies, their rates and also news related to cryptocurrencies.
-Build using external APIs to get the rates data and news. React-based. 
+A project dedicated to crypro currencies, their exchange rates and news from all over. Built by a team using React, Rest API, bootstrap, quite a few npm packages.
 
 
 Trello - https://trello.com/b/poprlYmW/currency       
